@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+const Home = () => {
+  const [text, setText] = useState("");
+  const [todoList, setTodoList] = useState([
+    "자바스크립트공부",
+    "리액트공부",
+    "블로그포스팅",
+  ]);
 
-function App() {
+  const handleClickAdd = () => {
+    const newTodoList = [...todoList, text];
+    setTodoList(newTodoList);
+  };
+
+  const handleChangeText = (e) => {
+    setText(e.target.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="form">
+        <input type="text" onChange={handleChangeText} />
+        <button type="button" onClick={handleClickAdd}>
+          추가하기
+        </button>
+      </div>
+      
+      <h1>TodoList</h1>
+      <ul>
+        {todoList.map(function (item) {
+          return <li>{item}</li>;
+        })}
+      </ul>
     </div>
   );
-}
+};
 
-export default App;
+export default Home;
