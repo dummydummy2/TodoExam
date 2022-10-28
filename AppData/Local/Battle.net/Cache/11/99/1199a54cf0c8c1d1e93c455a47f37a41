@@ -1,0 +1,1 @@
+{"files":{},"fragment_id":"world_of_warcraft_version_check_beta","products":[{"base":{"types":{"retail":{"quick_links":[{"action":{"type":"select_by_uid","uid":"wow_beta","verify_availability":true},"icon_v2":"default#QUICK_LINK_ICON_DOWNLOAD_AVAILABLE","id":"select_beta","label":"default#QUICK_LINK_BETA","rank":5,"show_on_web_ui":true}]}}},"id":"WoW"}],"strings":{},"version":29}
